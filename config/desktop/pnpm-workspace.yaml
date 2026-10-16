@@ -1,0 +1,3 @@
+packages:
+  - ../../agent-presets/*
+  - ../../plugins/*

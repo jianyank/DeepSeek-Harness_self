@@ -1,0 +1,11 @@
+{
+  "name": "@local/dsh-financial-timeseries-analyst",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

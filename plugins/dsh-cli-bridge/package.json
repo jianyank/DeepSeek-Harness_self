@@ -1,0 +1,48 @@
+{
+  "name": "dsh-cli-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness plugin for interactive Claude and Codex CLI PTY sessions.",
+  "scripts": {
+    "build": "node scripts/build-client.mjs",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "test:backend": "node --test tests/validation.test.mjs tests/process-backend.test.mjs tests/session-manager.test.mjs",
+    "test:routes": "node --test tests/routes.test.mjs tests/tools.test.mjs",
+    "test:client": "npm run build && node --test tests/client.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./dist/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "dist",
+    "lib",
+    "client",
+    "scripts",
+    "tests",
+    "README.md",
+    "cordis.patch.yml",
+    "package.json"
+  ],
+  "dependencies": {
+    "@xterm/xterm": "^5.3.0",
+    "node-pty": "^1.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation", "@deepseek-ai/dsh-client-ui-slots"],
+      "platform": "web"
+    }
+  }
+}

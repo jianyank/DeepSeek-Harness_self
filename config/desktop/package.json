@@ -1,0 +1,40 @@
+{
+  "name": "dsh-profile-financial-public",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@linxin666/dsh-client-ui-git-graph": "0.4.5",
+    "@linxin666/dsh-client-ui-task-board": "0.4.5",
+    "@wxg-prc-cpg/browser-skill-dsh-plugin": "0.3.2",
+    "dsh-better-sidebar": "0.25.0",
+    "dsh-cli-bridge": "file:../../plugins/dsh-cli-bridge",
+    "dsh-context": "0.66.1",
+    "dsh-obsidian-memory": "file:../../plugins/dsh-obsidian-memory",
+    "dsh-plugin-wallpaper-engine": "1.3.2",
+    "dsh-whale-widget": "0.3.18",
+    "dshmarket": "1.66.14",
+    "@local/dsh-financial-timeseries-analyst": "file:../../agent-presets/financial-timeseries-analyst",
+    "dsh-cache-prefix": "file:../../plugins/cache-prefix",
+    "dsh-project-folders": "file:../../plugins/project-folders",
+    "dsh-runtime-tuning": "file:../../plugins/runtime-tuning",
+    "dsh-windows-shell-fix": "file:../../plugins/windows-shell-fix",
+    "@local/dsh-workspace-picker": "file:../../plugins/project-folders/workspace-ui"
+  },
+  "dsh": {
+    "profile": {
+      "bundles": [
+        "@deepseek-ai/dsh-base",
+        "@deepseek-ai/dsh-web-app",
+        "dshmarket",
+        "dsh-whale-widget",
+        "dsh-context",
+        "@linxin666/dsh-client-ui-git-graph",
+        "dsh-obsidian-memory",
+        "dsh-cli-bridge",
+        "dsh-plugin-wallpaper-engine",
+        "dsh-better-sidebar",
+        "@local/dsh-financial-timeseries-analyst"
+      ]
+    }
+  }
+}

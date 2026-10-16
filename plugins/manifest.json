@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "local": [
+    {
+      "name": "dsh-cli-bridge",
+      "version": "0.1.0",
+      "path": "plugins/dsh-cli-bridge"
+    },
+    {
+      "name": "dsh-obsidian-memory",
+      "version": "0.2.0",
+      "path": "plugins/dsh-obsidian-memory"
+    },
+    {
+      "name": "@local/dsh-financial-timeseries-analyst",
+      "version": "1.0.0",
+      "path": "agent-presets/financial-timeseries-analyst"
+    },
+    {
+      "name": "dsh-cache-prefix",
+      "version": "0.1.0",
+      "path": "plugins/cache-prefix"
+    },
+    {
+      "name": "dsh-project-folders",
+      "version": "0.1.0",
+      "path": "plugins/project-folders"
+    },
+    {
+      "name": "dsh-runtime-tuning",
+      "version": "0.1.0",
+      "path": "plugins/runtime-tuning"
+    },
+    {
+      "name": "dsh-windows-shell-fix",
+      "version": "0.1.0",
+      "path": "plugins/windows-shell-fix"
+    },
+    {
+      "name": "@local/dsh-workspace-picker",
+      "version": "0.2.0-rc.2",
+      "path": "plugins/project-folders/workspace-ui"
+    }
+  ],
+  "registry": {
+    "@linxin666/dsh-client-ui-git-graph": "0.4.5",
+    "@linxin666/dsh-client-ui-task-board": "0.4.5",
+    "@wxg-prc-cpg/browser-skill-dsh-plugin": "0.3.2",
+    "dsh-better-sidebar": "0.25.0",
+    "dsh-context": "0.66.1",
+    "dsh-plugin-wallpaper-engine": "1.3.2",
+    "dsh-whale-widget": "0.3.18",
+    "dshmarket": "1.66.14"
+  },
+  "notes": [
+    "运行依赖在构建时安装，node_modules 不进入 Git。",
+    "__DSH_DATA__ 在安装时替换为独立数据目录。"
+  ]
+}

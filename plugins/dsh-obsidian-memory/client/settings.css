@@ -1,0 +1,32 @@
+.om-settings { max-width: 800px; width: 100%; min-width: 0; color: var(--dsw-alias-label-primary); font-size: 14px; letter-spacing: 0; }
+.om-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.om-header h2 { margin: 0; font-size: 20px; font-weight: 600; }
+.om-state { color: var(--dsw-alias-label-secondary); font-size: 12px; white-space: nowrap; }
+.om-fields { border: 0; padding: 0; margin: 0; min-width: 0; }
+.om-group { padding: 12px 0; border-bottom: 1px solid var(--dsw-alias-border-l2); }
+.om-group h3 { font-size: 14px; font-weight: 600; margin: 0 0 8px; }
+.om-row { display: grid; grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr); align-items: center; gap: 16px; min-height: 48px; padding: 6px 0; }
+.om-label { overflow-wrap: anywhere; }
+.om-row > span { min-width: 0; }
+.om-row input:not([type=checkbox]), .om-row select { width: 100%; min-width: 0; box-sizing: border-box; font: inherit; letter-spacing: 0; }
+.om-row select { padding: 8px 10px; border: 1px solid var(--dsw-alias-border-l2); border-radius: 6px; color: var(--dsw-alias-label-primary); background: var(--dsw-alias-bg-layer-3); }
+.om-types { display: flex; flex-wrap: wrap; gap: 12px 18px; padding: 6px 0; }
+.om-types > label { flex-shrink: 0; white-space: nowrap; }
+.om-directory { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 4px 12px; margin: 12px 0; }
+.om-directory strong { font-weight: 500; }
+.om-directory > span:last-child { grid-column: 2; }
+.om-path { overflow-wrap: anywhere; color: var(--dsw-alias-label-secondary); }
+.om-success { color: #298052; }
+.om-warning { color: #c65343; overflow-wrap: anywhere; }
+.om-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; padding-top: 18px; }
+.om-feedback { min-height: 24px; margin-top: 10px; overflow-wrap: anywhere; }
+@media (max-width: 500px) {
+  .om-header { flex-wrap: wrap; gap: 8px; }
+  .om-header h2 { font-size: 18px; overflow-wrap: anywhere; }
+  .om-row { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 10px 0; }
+  .om-directory { grid-template-columns: minmax(0, 1fr); }
+  .om-directory > span:last-child { grid-column: 1; }
+  .om-actions { justify-content: flex-start; }
+  .om-actions button { max-width: 100%; padding: 6px; font-size: 12px; }
+  .om-types { gap: 10px; }
+}

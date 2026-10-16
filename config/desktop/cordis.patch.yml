@@ -1,0 +1,69 @@
+# 公开、可迁移的 DSH patch 层。
+# 本文件不包含自定义模型供应商、密钥、会话、缓存或本机插件路径。
+- id: agent-default-model
+  name: "@deepseek-ai/dsh-agent-default-model"
+  config:
+    provider: deepseek-account
+    model: deepseek-flash
+    reasoningEffort: high
+- id: ui-chat
+  name: "@deepseek-ai/dsh-client-ui-chat"
+  config:
+    transcriptView: detailed
+    performanceUsage: compact
+- id: ui-settings
+  name: "@deepseek-ai/dsh-client-ui-settings"
+  config:
+    enabled: true
+- id: ui-theme
+  name: "@deepseek-ai/dsh-client-ui-theme"
+  config:
+    fontSize: 14
+- id: session-log-deepseek
+  name: "@deepseek-ai/dsh-session-log-deepseek"
+  config:
+    enabled: false
+
+# 可迁移的本机功能扩展。占位符在安装时替换为独立数据目录。
+- id: obsidian-memory
+  name: dsh-obsidian-memory
+  config:
+    vaultPath: __DSH_DATA__/Obsidian
+    memoryRoot: Memory
+    sandboxMode: workspace-write
+    project: deepseek-harness
+    injectBudgetChars: 2400
+    alwaysInjectTypes: [preference, open-question]
+    cardRecentCount: 8
+    refreshTtlMs: 5000
+    searchLimit: 12
+    rebuildIndexOnWrite: true
+- id: ui-workspace
+  name: '@deepseek-ai/dsh-client-ui-workspace'
+  disabled: true
+- insert:
+    - id: ui-workspace-project-folders
+      name: '@local/dsh-workspace-picker'
+    - id: project-folders
+      name: dsh-project-folders
+      config:
+        storagePath: __DSH_DATA__/project-folders.json
+    - id: cache-prefix
+      name: dsh-cache-prefix
+    - id: runtime-tuning
+      name: dsh-runtime-tuning
+    - id: windows-shell-fix
+      name: dsh-windows-shell-fix
+- id: better-sidebar
+  name: dsh-better-sidebar
+  config:
+    customCss: ''
+
+- id: skill-filesystem
+  name: '@deepseek-ai/dsh-skill-filesystem'
+  config:
+    customSkillDirs:
+      - __DSH_DATA__/skills/gstack
+      - __DSH_DATA__/skills/gstack/browser-skills
+      - __DSH_DATA__/skills/gstack/openclaw/skills
+      - __DSH_DATA__/skills/superpowers

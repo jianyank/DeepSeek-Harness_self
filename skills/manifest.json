@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "portable": [
+    {
+      "name": "obsidian-project-memory",
+      "path": "skills/obsidian-project-memory"
+    },
+    {
+      "name": "disk-cleaner",
+      "path": "skills/disk-cleaner"
+    },
+    {
+      "name": "find-skills",
+      "path": "skills/find-skills"
+    },
+    {
+      "name": "gstack",
+      "path": "skills/gstack"
+    },
+    {
+      "name": "superpowers",
+      "path": "skills/superpowers"
+    }
+  ],
+  "customRoots": [
+    "gstack",
+    "gstack/browser-skills",
+    "gstack/openclaw/skills",
+    "superpowers"
+  ],
+  "snapshots": {
+    "gstack": "19e699ab9b69de9e1bf10d4b7c2682703b56f984",
+    "disk-cleaner": "659b3bc541508d6af742e48468d6e8d1161556c8"
+  },
+  "notes": [
+    "保留技能资源和许可；不包含个人执行历史或运行依赖。",
+    "部分技能依赖外部工具或原宿主路径约定，使用前遵循对应技能说明。"
+  ]
+}

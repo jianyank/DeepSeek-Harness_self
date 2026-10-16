@@ -1,0 +1,12 @@
+{
+  "name": "dsh-self-distribution",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node tools/privacy-scan.js && node tools/verify-layout.js",
+    "test": "node --test tests/*.test.mjs",
+    "test:plugins": "node tools/test-plugins.mjs",
+    "build": "node tools/build-exe.js"
+  }
+}

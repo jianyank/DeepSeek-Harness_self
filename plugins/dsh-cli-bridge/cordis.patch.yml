@@ -1,0 +1,10 @@
+# dsh-cli-bridge bundle patch.
+- insert:
+    - id: cli-bridge
+      name: 'dsh-cli-bridge'
+      config:
+        workspaceRoot: '.'
+        allowedCwds: []
+        maxSessions: 8
+        maxBufferChars: 200000
+        defaultTimeoutMs: 0
